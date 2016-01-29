@@ -35,8 +35,8 @@ while (1):
 
         # line is assigned an array created from the integers in line, removing brackets, whitespace, and delimiting commas
         values = [int(i) for i in values.replace("[","").replace(" ","").replace("]","").split(",")]
-        #remove newline from amount
-        amount = amount.rstrip()
+        #remove newline from amount, may not be necessary with latest file
+        amount = int(amount.rstrip())
 
         results = coinChange.slowChange(values, amount)
         # write result as string to file
@@ -47,7 +47,7 @@ while (1):
         for last in coins[-1:]:
                 out_file.write(str(last) + ']')
         out_file.write('\n')
-        out_file.write(results[1])
+        out_file.write(str(results[1]))
         out_file.write('\n\n')
 
 # rewind to beginning of file and do it again with algorithm 2...
@@ -65,7 +65,7 @@ while (1):
                 break
         # line is assigned an array created from the integers in line, removing brackets, whitespace, and delimiting commas
         values = [int(i) for i in values.replace("[","").replace(" ","").replace("]","").split(",")]
-        amount.rstrip()
+        amount = int(amount.rstrip())
         results = coinChange.greedy(values, amount)
         # write result as string to file
         out_file.write('[')
@@ -75,7 +75,7 @@ while (1):
         for last in coins[-1:]:
                 out_file.write(str(last) + ']')
         out_file.write('\n')
-        out_file.write(results[1])
+        out_file.write(str(results[1]))
         out_file.write('\n\n')
 
 # rewind to beginning of file and do it again with algorithm 3...
@@ -93,7 +93,7 @@ while (1):
                 break
         # line is assigned an array created from the integers in line, removing brackets, whitespace, and delimiting commas
         values = [int(i) for i in values.replace("[","").replace(" ","").replace("]","").split(",")]
-        amount.rstrip()
+        amount = int(amount.rstrip())
         results = coinChange.dynamic(values, amount)
         # write result as string to file
         out_file.write('[')
@@ -103,7 +103,7 @@ while (1):
         for last in coins[-1:]:
                 out_file.write(str(last) + ']')
         out_file.write('\n')
-        out_file.write(results[1])
+        out_file.write(str(results[1]))
         out_file.write('\n')
 
 # close files
