@@ -20,7 +20,7 @@ outputFile = inputFile.replace(".txt", "change.txt")
 in_file = open(inputFile, 'r')
 out_file = open((outputFile), 'w')
 #infinite looping ...
-out_file.write(inputFile + "\n")
+out_file.write(inputFile + " - slowchange\n")
 while (1):        
         # read a line from file
         values = in_file.readline()
@@ -51,7 +51,7 @@ while (1):
         out_file.write('\n\n')
 
 # rewind to beginning of file and do it again with algorithm 2...
-out_file.write(inputFile + "\n")
+out_file.write(inputFile + " - greedy\n")
 in_file.seek(0)
 while (1):
         # read a line from file
@@ -79,7 +79,7 @@ while (1):
         out_file.write('\n\n')
 
 # rewind to beginning of file and do it again with algorithm 3...
-out_file.write(inputFile + "\n")
+out_file.write(inputFile + " - DP\n")
 in_file.seek(0)
 while (1):
         # read a line from file
