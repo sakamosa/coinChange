@@ -13,7 +13,6 @@ if len(sys.argv) != 2:
 inputFile = sys.argv[1]
 
 #use for testing, skip the commandline
-inputFile = 'test.txt'
 outputFile = inputFile.replace(".txt", "change.txt")
 
 #File contains:
