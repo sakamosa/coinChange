@@ -54,7 +54,7 @@ def slowChangeHelper(vals, coinArr, amt, numCoins):
         minAmtMinusI = slowChangeHelper(vals, coinsForAmtMinusI, amt-i, numCoins)
 
         #If this is fewer than the previous best/min number of coins:
-        if minI + minAmtMinusI < numCoins:
+        if minI + minAmtMinusI <= numCoins:
             #Update the minimum number of coins
             numCoins = minI + minAmtMinusI
             #Update the array of coins used
@@ -82,7 +82,7 @@ def greedy(values, amount):
 #Dynamic
 def dynamic(values, amount):
     size = len(values)
-    coins = values
+    coins = values 
     DPtable = [ [0] * size for i in range(amount + 1) ]
     DPtable[1][0] = 1
     
