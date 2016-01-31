@@ -8,6 +8,7 @@ Return Value:
 """
 #Slow Change
 def slowChange(values, amount):
+
     #Get the size of the list of values
     size = len(values)
 
@@ -83,16 +84,17 @@ def greedy(values, amount):
 def dynamic(values, amount):
     size = len(values)
     coins = values 
+    retCoins = [0]*size
     DPtable = [ [0] * size for i in range(amount + 1) ]
     DPtable[1][0] = 1
     
     #amount = 0 means we didn't use any coins
     if amount == 0:
-        return [coins, 0]
+        return [retCoins, 0]
     #amount = smallest value means we just use one of the smallest coin
     elif amount == values[0]:
-        coins[0] += 1
-        return [coins, 1]
+        retCoins[0] = 1
+        return [retCoins, 1]
     #calculate values for DPtable in bottom-up fashion
     else:
         #create array with incremented values up to amount so the default value
@@ -113,7 +115,7 @@ def dynamic(values, amount):
 
                 if (i + coins[j])  > amount:
                     break
-                elif (sums[i + coins[j]]) > (sums[i]+1):
+                elif (sums[i + coins[j]]) >= (sums[i]+1):
                     DPtable[i + coins[j]] = DPtable[i][:]
                     DPtable[i + coins[j]][j] += 1
                     sums[i + coins[j]] = sums[i] + 1
