@@ -85,14 +85,16 @@ def dynamic(values, amount):
     size = len(values)
     coins = values 
     retCoins = [0]*size
-    DPtable = [ [0] * size for i in range(amount + 1) ]
-    DPtable[1][0] = 1
-    
+
     #amount = 0 means we didn't use any coins
     if amount == 0:
         return [retCoins, 0]
-    #amount = smallest value means we just use one of the smallest coin
-    elif amount == values[0]:
+
+    DPtable = [ [0] * size for i in range(amount + 1) ]
+    DPtable[1][0] = 1
+    
+   #amount = smallest value means we just use one of the smallest coin
+    if amount == values[0]:
         retCoins[0] = 1
         return [retCoins, 1]
     #calculate values for DPtable in bottom-up fashion
