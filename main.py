@@ -6,7 +6,11 @@ import coinChange
 
 
 #Get file name from commandline args
-#inputFile = sys.argv[1]
+if len(sys.argv) != 2:
+    print("Correct usage: python main.py nameOfFile.txt")
+    sys.exit()
+
+inputFile = sys.argv[1]
 
 #use for testing, skip the commandline
 inputFile = 'test.txt'
