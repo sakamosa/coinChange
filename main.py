@@ -83,7 +83,7 @@ while (1):
         values = [int(i) for i in values.replace("[","").replace(" ","").replace("]","").split(",")]
         amount = int(amount.rstrip())
         startTime = timeit.default_timer()
-        results = coinChange.greedy(values, amount)
+        results = coinChange.changegreedy(values, amount)
         target.write(str(timeit.default_timer() - startTime))
         target.write(", ")
         # write result as string to file
@@ -115,7 +115,7 @@ while (1):
         values = [int(i) for i in values.replace("[","").replace(" ","").replace("]","").split(",")]
         amount = int(amount.rstrip()) 
         startTime = timeit.default_timer()
-        results = coinChange.dynamic(values, amount)
+        results = coinChange.changedp(values, amount)
         target.write(str(timeit.default_timer() - startTime))
         target.write(", ")
         # write result as string to file

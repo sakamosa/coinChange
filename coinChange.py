@@ -66,7 +66,7 @@ def slowChangeHelper(vals, coinArr, amt, numCoins):
     return numCoins
 
 #Greedy
-def greedy(values, amount):
+def changegreedy(values, amount):
     size = len(values)
     coins = [0]*size
     used = 0
@@ -81,7 +81,7 @@ def greedy(values, amount):
     return [coins, used]
     
 #Dynamic
-def dynamic(values, amount):
+def changedp(values, amount):
     size = len(values)
     coins = values 
     retCoins = [0]*size
