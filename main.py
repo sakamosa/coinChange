@@ -8,7 +8,7 @@ import timeit
 from timeit import Timer
 
 #Open file to store timing information
-myFile = "timinInfo.txt"
+myFile = "timingInfo.txt"
 target = open(myFile, 'w')
 
 #Get file name from commandline args

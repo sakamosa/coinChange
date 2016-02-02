@@ -17,6 +17,8 @@ first line contains the array V, formatted as [1, 5, 10, 25], denominations in i
 The next line contains one integer value for which we must make change.
 
 Program output is to a file named [input filename]change.txt where [input filename].txt is the input filename, and is formatted with one change result and the minimum number of coins m, per line. 
+
+Also, when the program is run, a file called timingInfo.txt is created. It will store all data created pertaining to the running times of the functions with supplied inputs.
 -----------------------------------------------------------
 Files
 -----------------------------------------------------------
