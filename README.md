@@ -15,46 +15,22 @@ Sara Sakamoto
 Files
 -----------------------------------------------------------
 main.py
-mainTimings.py
-
-maxsub.py
-
-MSS_Problems.txt
-
-
-MSS_Results.txt
+coinChange.py
 
 
 -----------------------------------------------------------
 main.py
 -----------------------------------------------------------
-Input: MSS_Problems.txt
-Output: MSS_Problems.txt
+Input: enter file name in command line
+Output: inputfile name + change.tx
 
 To run the program, enter the directory containing the files.
 
 In the command line, input:
 
+    chmod +x main.py
 
-     
-chmod +x main.py
-
-
-     python main.py
+    python main.py _inputfile_
 
 
 
------------------------------------------------------------
-mainTimings.py
------------------------------------------------------------
-Input: None, arrays are randomly generated for multiple values of n
-Output: Timings are output to timingInfo.txt
-Note: The current file has three values for n for example purposes. The values of n used
-for the analysis can be seen in the commented out code and in our analysis results.
-
-To run the timing, enter the directory containing the files.
-In the command line, input:
-
-    chmod +x mainTimings.py
-
-    python mainTimings.py
